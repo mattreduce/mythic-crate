@@ -15,11 +15,11 @@ Ensure Virtualbox and Vagrant are installed.
 2. `cd apfell-crate`
 3. Run `vagrant up` and wait about 8.5 minutes while everything installs :coffee:
 4. SSH access: run `vagrant ssh`
-5. Admin UI access: browse to http://localhost:8888 on your host machine
+5. Admin UI access: browse to http://localhost:7443 on your host machine
 6. Log in as `apfell_admin` with password `apfell_password`
 7. Go to Settings and change both username and password
 8. Click "Select an operation!" and make "default" the current op, or create an op
-9. Go to C2 Profile Management, start the default profile's server (maps to port 9000)
+9. Go to C2 Profile Management, start the default profile's server
 10. Guest VM's `/vagrant` directory is shared with project directory on host
 
 ### Administration
