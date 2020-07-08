@@ -22,10 +22,11 @@ Ensure Virtualbox and Vagrant are installed.
 9. Go to C2 Profile Management, start the default profile's server (maps to port 9000)
 10. Guest VM's `/vagrant` directory is shared with project directory on host
 
-### VM management
+### Administration
 
-* To power off, run `vagrant halt`
-* To continue working, run `vagrant up` then `vagrant ssh` and `cd Apfell; sudo ./start_apfell.sh`
+* Run Apfell admin scripts _right from your host OS_ like `vagrant ssh -c "sudo ./Apfell/status_check.sh"`
+* To suspend the VM, run `vagrant suspend`; run `vagrant resume` to continue in about 30 seconds
+* To safely and completely power off, run `vagrant halt`; likewise `vagrant up` will power up
 * Run `vagrant destroy` to remove the VM and clean up your work
 
 ## Resources
