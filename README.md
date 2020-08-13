@@ -15,7 +15,7 @@ Ensure Virtualbox and Vagrant are installed.
 2. `cd mythic-crate`
 3. Run `vagrant up` and wait about 8.5 minutes while everything installs :coffee:
 4. SSH access: run `vagrant ssh`
-5. Admin UI access: browse to http://localhost:7443 on your host machine
+5. Admin UI access: browse to https://localhost:7443 on your host machine
 6. Log in as `mythic_admin` with password `mythic_password`
 7. Go to Settings and change both username and password
 8. Go to C2 Profile Management, start the HTTP C2 Profile server
