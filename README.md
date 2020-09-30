@@ -13,13 +13,15 @@ Ensure Virtualbox and Vagrant are installed.
 
 1. `git clone https://github.com/mattreduce/mythic-crate.git`
 2. `cd mythic-crate`
-3. Run `vagrant up` and wait about 8.5 minutes while everything installs :coffee:
-4. SSH access: run `vagrant ssh`
-5. Admin UI access: browse to https://localhost:7443 on your host machine
-6. Log in as `mythic_admin` with password `mythic_password`
-7. Go to Settings and change both username and password
-8. Go to C2 Profile Management, start the HTTP C2 Profile server
-9.  Guest VM's `/vagrant` directory is shared with project directory on host
+3. Run `export VAGRANT_EXPERIMENTAL=disks` to be able to customize the disk
+   size of your VM
+4. Run `vagrant up` and wait about 8.5 minutes while everything installs :coffee:
+5. SSH access: run `vagrant ssh`
+6. Admin UI access: browse to https://localhost:7443 on your host machine
+7. Log in as `mythic_admin` with password `mythic_password`
+8. Go to Settings and change both username and password
+9. Go to C2 Profile Management, start the HTTP C2 Profile server
+10.  Guest VM's `/vagrant` directory is shared with project directory on host
 
 ### Administration
 

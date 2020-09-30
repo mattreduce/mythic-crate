@@ -4,6 +4,8 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/bionic64"
 
+  config.vm.disk :disk, size: "30GB", primary: true
+
   config.vm.provision :shell, path: "./setup.sh"
 
   # Expose Mythic admin UI on port 7443
