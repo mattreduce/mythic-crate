@@ -30,6 +30,17 @@ Ensure Virtualbox and Vagrant are installed.
 * To safely and completely power off, run `vagrant halt`; likewise `vagrant up` will power up
 * Run `vagrant destroy` to remove the VM and clean up your work
 
+### Ports
+
+Ports exposed on your host system, mapped to their normal Mythic C2 port:
+
+| VM   | Host | Purpose              |
+| ---- | ---- | -------------------- |
+| 7443 | 7443 | Admin UI             |
+| 80   | 8080 | HTTP C2 traffic      |
+| 443  | 443  | HTTPS C2 traffic     |
+| 8081 | 8081 | Websocket C2 traffic |
+
 ## Resources
 
 * https://www.vagrantup.com/docs
