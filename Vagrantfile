@@ -12,6 +12,9 @@ Vagrant.configure("2") do |config|
 
   config.vm.provision :shell, path: "./setup.sh"
 
+  # Expose Mythic documentation on port 8888
+  config.vm.network "forwarded_port", guest: 8888, host: 8888
+
   # Expose Mythic admin UI on port 7443
   config.vm.network "forwarded_port", guest: 7443, host: 7443
 
