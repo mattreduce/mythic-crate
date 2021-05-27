@@ -18,8 +18,8 @@ Ensure Virtualbox and Vagrant are installed.
 4. Run `vagrant up` and wait about 8.5 minutes while everything installs :coffee:
 5. SSH access: run `vagrant ssh`
 6. Admin UI access: browse to https://localhost:7443 on your host machine
-7. Log in as `mythic_admin` with password `mythic_password`
-8. Go to Settings and change both username and password
+7. Log in as `mythic_admin` with the password found as `MYTHIC_ADMIN_PASSWORD`
+   in the `.env` file inside the Mythic folder (on the VM)
 9. Go to C2 Profile Management, start the HTTP C2 Profile server
 10.  Guest VM's `/vagrant` directory is shared with project directory on host
 
@@ -37,10 +37,8 @@ Ports exposed on your host system, mapped to their normal Mythic C2 port:
 | VM   | Host | Purpose              |
 | ---- | ---- | -------------------- |
 | 7443 | 7443 | Admin UI             |
-| 8888 | 8888 | Documentation        |
 | 80   | 8080 | HTTP C2 traffic      |
 | 443  | 4443 | HTTPS C2 traffic     |
-| 8081 | 8081 | Websocket C2 traffic |
 
 ## Resources
 
