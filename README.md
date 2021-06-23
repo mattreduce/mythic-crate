@@ -1,9 +1,11 @@
 # mythic-crate
 
-:crossed_swords: :package: An Ubuntu 18.04 box for Mythic (formerly Apfell) C2 framework development 
+:crossed_swords: :package: An Ubuntu 18.04 box for Mythic C2 framework
+development
 
 Takes care of Mythic dependencies and setup, port forwarding and folder
-sharing, using [Virtualbox](https://www.virtualbox.org/) and [Vagrant](https://www.vagrantup.com/).
+sharing, using [Virtualbox](https://www.virtualbox.org/) and
+[Vagrant](https://www.vagrantup.com/).
 
 ## Instructions
 
@@ -15,19 +17,21 @@ Ensure Virtualbox and Vagrant are installed.
 2. `cd mythic-crate`
 3. Run `export VAGRANT_EXPERIMENTAL=disks` to be able to customize the disk
    size of your VM
-4. Run `vagrant up` and wait about 8.5 minutes while everything installs :coffee:
+4. Run `vagrant up` to boot and setup the VM
 5. SSH access: run `vagrant ssh`
 6. Admin UI access: browse to https://localhost:7443 on your host machine
 7. Log in as `mythic_admin` with the password found as `MYTHIC_ADMIN_PASSWORD`
    in the `.env` file inside the Mythic folder (on the VM)
-9. Go to C2 Profile Management, start the HTTP C2 Profile server
-10.  Guest VM's `/vagrant` directory is shared with project directory on host
+8.  Guest VM's `/vagrant` directory is shared with project directory on host
 
 ### Administration
 
-* Run Mythic admin scripts _right from your host OS_ like `vagrant ssh -c "sudo ./Mythic/status_check.sh"`
-* To suspend the VM, run `vagrant suspend`; run `vagrant resume` to continue in about 30 seconds
-* To safely and completely power off, run `vagrant halt`; likewise `vagrant up` will power up
+* Run Mythic admin scripts _right from your host OS_ like `vagrant ssh -c
+  "sudo -E ./mythic-cli status"`
+* To suspend the VM, run `vagrant suspend`; run `vagrant resume` to continue
+  in about 30 seconds
+* To safely and completely power off, run `vagrant halt`; likewise `vagrant
+  up` will power up
 * Run `vagrant destroy` to remove the VM and clean up your work
 
 ### Ports
