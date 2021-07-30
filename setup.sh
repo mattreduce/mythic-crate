@@ -1,3 +1,11 @@
+DEBIAN_FRONTEND=noninteractive
+sudo apt-get update
+sudo apt-get upgrade -y
+
+# Ensure VM time is consistently synchronized
+sudo timedatectl set-ntp no
+sudo apt-get install ntp -y
+
 git clone https://github.com/its-a-feature/Mythic.git
 cd Mythic
 
