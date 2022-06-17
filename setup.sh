@@ -13,6 +13,7 @@ pip3 install mythic
 # Get the latest Mythic from GitHub
 git clone https://github.com/its-a-feature/Mythic.git
 cd Mythic
+git checkout v2.2.14
 
 # Install Docker and Docker Compose
 sudo ./install_docker_ubuntu.sh
