@@ -12,14 +12,18 @@ pip3 install mythic
 
 # Get the latest Mythic from GitHub
 git clone https://github.com/its-a-feature/Mythic.git
-cd Mythic
+git clone https://github.com/MythicC2Profiles/http.git
+
+cd http
+git checkout c139215e052fb3326ec0c75e1f6d7619ab355138
+
+cd ../Mythic
 git checkout v2.2.14
 
 # Install Docker and Docker Compose
 sudo ./install_docker_ubuntu.sh
 
 # Install a C2 Profile and some Payloads, start everything up
-sudo -E ./mythic-cli install github https://github.com/MythicC2Profiles/http
-sudo -E ./mythic-cli install github https://github.com/MythicAgents/apfell
-sudo -E ./mythic-cli install github https://github.com/MythicAgents/poseidon
+sudo ./mythic-cli install folder ../http/
+sudo -E ./mythic-cli install github https://github.com/MythicAgents/venus
 sudo -E ./mythic-cli mythic start
